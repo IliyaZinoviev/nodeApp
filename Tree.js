@@ -211,3 +211,7 @@ createTree('ВНП', '2017', 'Россия', function(root){
     tree = root;
     travelsal(root, console.log, '');
 });
+
+function foo(){
+    console.log('HelloWorld');
+}

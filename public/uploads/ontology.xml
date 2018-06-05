@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#"
+     xml:base="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics"
+     xmlns:macroeconomics="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:onto="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#вычисляется_по -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#вычисляется_по">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#имеет_номер -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#имеет_номер">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#определяется_параметром -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#определяется_параметром">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Параметр"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#относится_к -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#относится_к">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#относится_к_значению -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#относится_к_значению"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#представляет_собой -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#представляет_собой">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#принадлежит -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#принадлежит">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#соответствует_отображению -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#соответствует_отображению">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Отображение"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#состоит_из -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#состоит_из">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Параметр"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Обстоятельство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#является -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#является">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Год -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Год">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Обстоятельство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Обстоятельство -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Обстоятельство"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Отображение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Отображение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Параметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Параметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Страна">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Обстоятельство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг. -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#ВВП -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#ВВП">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <является rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#ВНП -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#ВНП">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <вычисляется_по rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП"/>
+        <является rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_граждан_за_рубежом -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_граждан_за_рубежом">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <определяется_параметром rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017"/>
+        <является rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_иностранцев_в_данной_стране -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_иностранцев_в_данной_стране">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <является rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_ВВП_RUS17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_ВВП_RUS17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <определяется_параметром rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017"/>
+        <принадлежит rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#ВВП"/>
+        <Значение rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12332.5</Значение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_ВНП_RUS17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_ВНП_RUS17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <определяется_параметром rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_Доходы_граждан_за_рубежом_RUS17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_Доходы_граждан_за_рубежом_RUS17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <определяется_параметром rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017"/>
+        <принадлежит rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_граждан_за_рубежом"/>
+        <Значение rdf:datatype="http://www.w3.org/2001/XMLSchema#double">234.34</Значение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_Доходы_иностранцев_в_данной_стране_RUS17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_Доходы_иностранцев_в_данной_стране_RUS17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <определяется_параметром rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017"/>
+        <принадлежит rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_иностранцев_в_данной_стране"/>
+        <Значение rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4545.67</Значение>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_Чистые_факторные_доходы_из-за_рубежа_RUS17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#З_Чистые_факторные_доходы_из-за_рубежа_RUS17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Значение"/>
+        <определяется_параметром rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Страна"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+        <соответствует_отображению rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#+"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+        <соответствует_отображению rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#-"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Чистые_факторные_доходы_из-за_рубежа -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Чистые_факторные_доходы_из-за_рубежа">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Понятие"/>
+        <вычисляется_по rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа"/>
+        <является rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#R"/>
+        <rdfs:comment>чистые факторные доходы из-за рубежа (разность между доходами граждан страны за рубежом и иностранцев в данной стране)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Отображение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Отображение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Год"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Номер"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия,2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Страна"/>
+        <состоит_из rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Россия"/>
+        <состоит_из rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#2017"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП,1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП,1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+        <имеет_номер rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#1"/>
+        <относится_к rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП"/>
+        <представляет_собой rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#ВВП"/>
+        <Номер rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Номер>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП,2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП,2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Формула"/>
+        <относится_к rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_ВНП"/>
+        <представляет_собой rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Чистые_факторные_доходы_из-за_рубежа"/>
+        <Номер rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Номер>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа,1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа,1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+        <имеет_номер rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#1"/>
+        <относится_к rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа"/>
+        <представляет_собой rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_граждан_за_рубежом"/>
+        <Номер rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Номер>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа,2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа,2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Пара:Формула,Ном.арг."/>
+        <имеет_номер rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#2"/>
+        <относится_к rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Ф_Чистые_факторные_доходы_из-за_рубежа"/>
+        <представляет_собой rdf:resource="http://www.semanticweb.org/marchenko_ilya/ontologies/2018/5/macroeconomics#Доходы_иностранцев_в_данной_стране"/>
+        <Номер rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Номер>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

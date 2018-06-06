@@ -16,17 +16,16 @@
     <%= typeof msg != 'undefined' ? msg : '' %>
     <form name="getFile" method="post" action="/upload" enctype="multipart/form-data">
         <div class="file-field input-field">
-            <div class="btn gray">
-                <span>File</span>
+            <div class="btn blue accent-3">
+                <span>Выбрать</span>
                 <input type="file" name="ontology">
             </div>
             <div class="file-path-wrapper">
                 <input type="text" class="file-path validate">
             </div>
-            <button class="btn" type="submit">Отправить</button>
+            <button class="btn blue accent-3" type="submit">Отправить</button>
         </div>
     </form>
-    <br>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>

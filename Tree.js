@@ -207,7 +207,11 @@ function travelsal(tree, fn, str){
 
 let tree;
 
-createTree('ВНП', '2017', 'Россия', function(root){
-    tree = root;
-    travelsal(root, console.log, '');
-});
+// createTree('ВНП', '2017', 'Россия', function(root){
+//     tree = root;
+//     travelsal(root, console.log, '');
+// });
+
+module.exports.createTree = createTree;
+module.exports.Node = Node;
+module.exports.travelsal = travelsal;

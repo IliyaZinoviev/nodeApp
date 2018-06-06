@@ -4,7 +4,10 @@ const ejs = require('ejs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const multer  = require('multer');
+const genTree = require('./Tree.js');
 
+//Объявление дерева
+let tree;
 
 // Init app, parsers, view engine
 const jsonParser = bodyParser.json();
@@ -35,7 +38,7 @@ function checkFileType(file, cb){
     // Проверка расширения
     const extName = fileTypes.test(path.extname(file.originalname).toLowerCase());
     // // Проверка MIME
-    const mimeType = fileTypes.test(file.mimetype);;
+    const mimeType = fileTypes.test(file.mimetype);
     if(mimeType && extName){
         return cb(null, true);
     } else{
@@ -49,6 +52,17 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => res.render('index'));
+app.get('/print', (req, res) => {
+    let obj = {arr: []};
+    genTree.createTree('ВНП', '2017', 'Россия', function(root){
+        tree = root;
+        genTree.travelsal(tree, function(x){ obj.arr.push(x)}, '');
+        console.log(obj);
+        res.render('print', {
+            tree: obj,
+        });
+    });
+});
 
 app.post('/upload', (req, res) => {
     upload(req, res, (err) => {
@@ -62,9 +76,7 @@ app.post('/upload', (req, res) => {
                     msg: 'Ошибка: Выберите файл!'
                 });
             } else {
-                res.render('index', {
-                    msg: 'Файл загружен!',
-                });
+                res.redirect('/print');
             }
         }
     });

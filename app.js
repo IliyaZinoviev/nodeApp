@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const multer  = require('multer');
 const genTree = require('./Tree.js');
 
-//Объявление дерева
+// Объявление дерева
 let tree;
 
 // Init app, parsers, view engine
@@ -52,6 +52,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => res.render('index'));
+
 app.get('/print', (req, res) => {
     let obj = {arr: []};
     genTree.createTree('ВНП', '2017', 'Россия', function(root){

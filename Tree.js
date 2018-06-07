@@ -210,12 +210,12 @@ function travelsal(tree, fn, str){
         travelsal(tree.r, fn, str + '    ');
 }
 
-let tree;
-
-createTree('ВНП', '2017', 'Россия', function(root){
-    tree = root;
-    travelsal(root, console.log, '');
-});
+// let tree;
+//
+// createTree('ВНП', '2017', 'Россия', function(root){
+//     tree = root;
+//     travelsal(root, console.log, '');
+// });
 
 module.exports.createTree = createTree;
 module.exports.Node = Node;

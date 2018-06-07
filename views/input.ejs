@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <title>Нагруженное дерево</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1>Введите показатель, год и страну, чтобы получить значение этого показателя для выбранных места и времени.</h1>
+    <form name="getParam" method="post" action="/getParameters">
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="text" name="index" id="index" class="validate">
+                <label class="active" for="first_name2">Показатель</label>
+            </div>
+            <div class="input-field col s4">
+                <input type="text" name="year" id="year" class="validate">
+                <label class="active" for="year">Год</label>
+            </div>
+            <div class="input-field col s4">
+                <input type="text" name="country" id="country" class="validate">
+                <label class="active" for="country">Страна</label>
+            </div>
+            <button class="btn blue accent-4" type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

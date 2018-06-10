@@ -1,6 +1,7 @@
 {
   "name": "Ontology",
   "version": "0.0.1",
+  "author": "Marchenko Ilya",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"

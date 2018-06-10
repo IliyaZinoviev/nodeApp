@@ -8,6 +8,8 @@ const genTree = require('./Tree.js');
 
 // Объявление дерева
 let tree;
+
+// Дерево передаётся в виде текстового файла в представление print
 let obj;
 
 // Init app, parsers, view engine
@@ -56,11 +58,10 @@ app.get('/', (req, res) => res.render('index'));
 
 app.get('/input', (req, res) => res.render('input'));
 
-app.get('/print', (req, res) => {
+app.get('/print', (req, res) =>
     res.render('print', {
-        tree: obj,
-    });
-});
+                            tree: obj,})
+);
 
 app.post('/upload', (req, res) => {
     upload(req, res, (err) => {

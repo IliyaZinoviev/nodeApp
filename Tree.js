@@ -4,7 +4,7 @@ const $rdf = require('rdflib');
 
 const RDF = $rdf.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 const RDFS = $rdf.Namespace("http://www.w3.org/2000/01/rdf-schema#");
-const FOAF = $rdf.Namespace("http://xmlns.com/foaf/0.1/");
+const FOAF = $rdf.Namespace("hdefttp://xmlns.com/foaf/0.1/");
 const XSD = $rdf.Namespace("http://www.w3.org/2001/XMLSchema#");
 const OWL = $rdf.Namespace("http://www.w3.org/2002/07/owl#");
 
@@ -19,7 +19,7 @@ const links = new Map([[1, 'isEqToCond'], [2, 'def'], [3, 'pair'], [4, 'eq'], [5
 let paramURI;
 let countryURI;
 let yearURI;
-let conceptURI;
+let argURI;
 let year;
 let concept;
 let country;
@@ -52,8 +52,8 @@ function createTree(concept_, year_, country_, callback) {
 }
 
 function setConcept(){
-    conceptURI = prefix + concept;
-    return new Node(concept, conceptURI);
+    argURI = prefix + concept;
+    return new Node(concept, argURI);
 }
 
 function setParams(callback){
@@ -68,21 +68,20 @@ function setParams(callback){
 }
 
 function setIsEqToCond(){
-    let arrFormula = store.statementsMatching($rdf.sym(conceptURI), $rdf.sym(prefix + 'вычисляется_по'), undefined);
+    let arrFormula = store.statementsMatching(undefined, $rdf.sym(prefix + 'вычисляет'), $rdf.sym(argURI));
     let node = new Node(links.get(1));
     if(arrFormula.length > 1) {
         let objParals = {
             arr: []
         };
         node.r = subtreeFormation(objParals, links.get(5), arrFormula.length, 1);
-        console.log(objParals);
         for (let i = 0; i < objParals.arr.length; i++)
             if (objParals.arr[i] === null)
-                objParals.arr[i - 1].r = setPair(arrFormula[i].object.value);
+                objParals.arr[i - 1].r = setPair(arrFormula[i].subject.value);
             else
-                objParals.arr[i].l = setPair(arrFormula[i].object.value);
+                objParals.arr[i].l = setPair(arrFormula[i].subject.value);
     } else{
-        node.r = setPair(arrFormula[0].object.value);
+        node.r = setPair(arrFormula[0].subject.value);
     }
     return node;
 }
@@ -132,26 +131,38 @@ function subtreeFormation(obj, rel, n, i){
 
 // В качестве аргумента (переменной) могут выступать формула и понятие.
 function setArg(formulaNumURI){
-    let conceptURI = store.statementsMatching($rdf.sym(formulaNumURI), $rdf.sym(prefix + 'представляет_собой'), undefined)[0]
+    let argURI = store.statementsMatching($rdf.sym(formulaNumURI), $rdf.sym(prefix + 'представляет_собой'), undefined)[0]
         .object.value;
-    if(hasValue(conceptURI))
-        return new Node(getLabel(conceptURI), conceptURI);
+    let typeOfArg = store.statementsMatching($rdf.sym(argURI), RDF('type'), undefined, undefined)[1].object.value;
+    if(getLabel(typeOfArg) === 'Формула')
+        return setDep(argURI);
     else {
-        arrConcepts.push({label: getLabel(conceptURI), uri: conceptURI});
-        return setDep(store.statementsMatching($rdf.sym(conceptURI), $rdf.sym(prefix + 'вычисляется_по'), undefined)[0]
-            .object.value);
+        if (hasValue(argURI))
+            return new Node(getLabel(argURI), argURI);
+        else {
+            arrConcepts.push({label: getLabel(argURI), uri: argURI}); // Множество показателей, использующихся для вычисления формулы
+            return setDep(store.statementsMatching(undefined, $rdf.sym(prefix + 'вычисляет'), $rdf.sym(argURI))[0]
+                .subject.value);
+        }
     }
 }
 
 // Если понятие имеет значение, тогда сохранить его в массив arrValues
 function hasValue(conceptURI){
-    let triple = store.statementsMatching(undefined, getURI('принадлежит'), $rdf.sym(conceptURI));
-    if(0 !== triple.length){
-        let valueURI = triple[0].subject.value;
+    let valueURI = checkParam(store.statementsMatching(undefined, getURI('принадлежит'), $rdf.sym(conceptURI)));
+    if(null !== valueURI){
         arrValues.push({label: getLabel(valueURI), uri: valueURI});
         return true;
     } else
         return false;
+}
+
+function checkParam(arr){
+    for(let a of arr){
+        if(store.statementsMatching($rdf.sym(a.subject.value), getURI('определяется_параметром'), $rdf.sym(paramURI)).length !== 0)
+            return a.subject.value;
+    }
+    return null;
 }
 
 function setCond(){
@@ -204,13 +215,6 @@ function travelsal(tree, fn, str){
     if(tree.r !== null)
         travelsal(tree.r, fn, str + '    ');
 }
-
-let tree;
-
-// createTree('ВНП', '2017', 'Россия', function(root){
-//     tree = root;
-//     travelsal(root, console.log, '');
-// });
 
 module.exports.createTree = createTree;
 module.exports.Node = Node;
